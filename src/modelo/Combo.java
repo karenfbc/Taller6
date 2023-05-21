@@ -8,6 +8,10 @@ public class Combo implements Producto{
 	
 	private String nombreCombo;
 	
+	private int precio;
+	
+	private int calorias;
+	
 	
 	//constructor Combo
 	
@@ -22,12 +26,13 @@ public class Combo implements Producto{
 	
 	public void agregarItemACombo(Producto itemCombo) {
 		
+		
 	}
 	
 	@Override
 	public int getPrecio() {
 		
-		return precio * descuento / 100;
+		return (int) (precio * descuento / 100);
 	}
 	
 	public String generarTextoFactura() {
