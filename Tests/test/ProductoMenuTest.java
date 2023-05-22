@@ -10,9 +10,9 @@ import modelo.ProductoMenu;
 class ProductoMenuTest {
     @Test
     public void testGenerarTextoFactura() {
-        ProductoMenu producto = new ProductoMenu("Hamburguesa", 100, 500);
+        ProductoMenu producto = new ProductoMenu("papas medianas", 100, 500);
         String textoFactura = producto.generarTextoFactura();
-        assertEquals("Hamburguesa               100", textoFactura);
+        assertEquals("papas medianas               100", textoFactura);
     }
 }
 

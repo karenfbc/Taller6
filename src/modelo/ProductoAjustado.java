@@ -23,22 +23,23 @@ public class ProductoAjustado implements Producto {
 	public void agregarIngrediente(Ingrediente ingrediente) {
 		
 		precio += ingrediente.getCostoAdicional();
-		calorias += ingrediente.getCalorias();
-		
-		String nombreIngredienteFormateado = String.format("%-30.30s", ingrediente.getNombre());
-		String precioIngredienteFormateado = String.format("%10d", ingrediente.getCostoAdicional());
-		factura += "+ " + nombreIngredienteFormateado + precioIngredienteFormateado + "\n";
+        calorias += ingrediente.getCalorias();
+
+        String nombreIngredienteFormateado = ingrediente.getNombre();
+        String precioIngredienteFormateado = String.valueOf(ingrediente.getCostoAdicional());
+        factura += "+ " + nombreIngredienteFormateado + "               " + precioIngredienteFormateado;
+    
 	}
 		
 	
 	public void quitarIngrediente(Ingrediente ingrediente) {
 		
 		calorias -= ingrediente.getCalorias();
-		
-		String nombreIngredienteFormateado = String.format("%-30.30s", ingrediente.getNombre());
-	    String precioIngredienteFormateado = String.format("%10d", "0");
-	    factura += "- " + nombreIngredienteFormateado + precioIngredienteFormateado + "\n";
-		
+
+        String nombreIngredienteFormateado = ingrediente.getNombre();
+        String precioIngredienteFormateado = "0";
+        factura += "- " + nombreIngredienteFormateado + "               " + precioIngredienteFormateado;
+        
 	}
 	
 	        //
