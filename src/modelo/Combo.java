@@ -11,18 +11,20 @@ public class Combo implements Producto{
 	
 	private String nombreCombo;
 	
-	private int precio = 0;
+	private int precio;
 	
-	private int calorias = 0;
+	private int calorias;
 	
 	
 	
 	//constructor Combo
 	
 
-	public Combo(String nombreCombo, int descuento) {
+	public Combo(String nombreCombo, double descuento) {
 		this.nombreCombo = nombreCombo;
 		this.descuento = descuento;
+		this.precio = 0;
+		this.calorias = 0;
 	}
 	
 	//metodos Combo
@@ -36,7 +38,7 @@ public class Combo implements Producto{
 	
 	@Override
 	public int getPrecio() {
-		return (int) (precio * descuento / 100);
+		return (int) (precio * (1-descuento));
 	}
 	
 	@Override
