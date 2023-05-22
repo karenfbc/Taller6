@@ -41,8 +41,8 @@ public class ProductoMenu implements Producto {
 	@Override
 	public String generarTextoFactura() {
 		
-		String nombreFormateado = String.format("%-30.30s", nombre);
-	    String precioBaseFormateado = String.format("%10d", precioBase);
+		String nombreFormateado = nombre;
+	    String precioBaseFormateado = "               " + precioBase;
 	    return nombreFormateado + precioBaseFormateado;
 		
 	}
