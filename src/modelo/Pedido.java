@@ -95,6 +95,9 @@ public class Pedido {
 		
 	}
 	
+	public List<Producto> getListaProductos(){
+		return listaProductos;
+	}
 	
 	private String generarTextoFactura() {
 		
