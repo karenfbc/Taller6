@@ -99,7 +99,7 @@ public class Pedido {
 		return listaProductos;
 	}
 	
-	private String generarTextoFactura() {
+	public String generarTextoFactura() {
 		
 		StringBuilder factura = new StringBuilder();
 		factura.append("------ Factura ------\n");
