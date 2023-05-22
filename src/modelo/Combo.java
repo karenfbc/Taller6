@@ -1,5 +1,8 @@
 package modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Combo implements Producto{
 	
 	//atributos Combo
@@ -13,13 +16,13 @@ public class Combo implements Producto{
 	private int calorias = 0;
 	
 	
+	
 	//constructor Combo
 	
 
-	public Combo(String nombreCombo, double descuento) {
+	public Combo(String nombreCombo, int descuento) {
 		this.nombreCombo = nombreCombo;
 		this.descuento = descuento;
-		
 	}
 	
 	//metodos Combo
@@ -33,16 +36,15 @@ public class Combo implements Producto{
 	
 	@Override
 	public int getPrecio() {
-		
 		return (int) (precio * descuento / 100);
 	}
 	
 	@Override
 	public String generarTextoFactura() {
 		
-		String nombreFormateado = String.format("%-30.30s", nombreCombo);
-	    String precioBaseFormateado = String.format("%10d", precio);
-	    return nombreFormateado + precioBaseFormateado;
+		String nombreFormateado = nombreCombo;
+	    String precioBaseFormateado = String.valueOf(calorias);
+	    return nombreFormateado + "               "+ precioBaseFormateado;
 		
 	}
 	
