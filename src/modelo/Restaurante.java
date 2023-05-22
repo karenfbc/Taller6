@@ -145,6 +145,10 @@ public class Restaurante {
 				if (combos.length == 5) {
 				String nombre = combos[0].trim();
 				int descuento = Integer.parseInt(combos[1].trim().replace("%", ""));
+				
+				// agregar precio y calorias individuales a items del combo 
+				
+				
 				String hamburguesa = combos[2].trim();;
 				String acompanamiento =combos[3].trim();;
 				String bebida = combos[4].trim(); ;

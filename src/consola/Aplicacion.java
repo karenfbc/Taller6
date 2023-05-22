@@ -4,8 +4,6 @@ import java.io.File;
 
 import modelo.Restaurante;
 
-//TODO: decidir qué otras clases y métodos quiere incluir en la consola de la aplicación
-
 public class Aplicacion {
 	
 	

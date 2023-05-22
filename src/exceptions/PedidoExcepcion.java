@@ -1,9 +1,9 @@
 package exceptions;
 
-public class PedidoExcepcion {
+public class PedidoExcepcion extends Exception{
 
-	public PedidoExcepcion() {
-		// TODO Auto-generated constructor stub
+	public PedidoExcepcion(String mensaje) {
+		super(mensaje);
 	}
 
 }

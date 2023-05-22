@@ -18,6 +18,31 @@ public class ProductoAjustado implements Producto {
 	
 	// metodos ProductoAjustado
 	
+			//agregar y quitar ingredientes de producto
+	
+	public void agregarIngrediente(Ingrediente ingrediente) {
+		
+		precio += ingrediente.getCostoAdicional();
+		calorias += ingrediente.getCalorias();
+		
+		String nombreIngredienteFormateado = String.format("%-30.30s", ingrediente.getNombre());
+		String precioIngredienteFormateado = String.format("%10d", ingrediente.getCostoAdicional());
+		factura += "+ " + nombreIngredienteFormateado + precioIngredienteFormateado + "\n";
+	}
+		
+	
+	public void quitarIngrediente(Ingrediente ingrediente) {
+		
+		calorias -= ingrediente.getCalorias();
+		
+		String nombreIngredienteFormateado = String.format("%-30.30s", ingrediente.getNombre());
+	    String precioIngredienteFormateado = String.format("%10d", "0");
+	    factura += "- " + nombreIngredienteFormateado + precioIngredienteFormateado + "\n";
+		
+	}
+	
+	        //
+	
 	@Override
 	public String getNombre() {
 		return base.getNombre() ;
